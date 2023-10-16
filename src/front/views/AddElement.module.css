@@ -1,0 +1,332 @@
+.generalDiv {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    color: #fae500;
+    font-weight: bold
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.personalizeLetters {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 3rem;
+}
+
+.centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.properties {
+    padding: 4px 0px;
+}
+
+.properties p {
+    margin-bottom: 0;
+    width: 150px;
+}
+
+.properties input {
+    height: 70%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-right-color: #fae50082;
+    border-bottom-color: #fae50082;
+    color: #fae500;
+    font-weight: bold;
+    width: 13rem;
+}
+
+.properties textarea {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid;
+    border-top-color: rgb(30, 30, 30);
+    border-left-color: rgb(30, 30, 30);
+    border-right-color: #fae50082;
+    border-bottom-color: #fae50082;
+    color: #fae500;
+    font-weight: bold;
+    width: 13rem;
+}
+
+.leftContent select {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border-right-color: #fae50082;
+    border-bottom-color: #fae50082;
+    color: #fae500;
+    font-weight: bold;
+}
+
+.properties input:focus {
+    outline: none;
+    border-right-color: #fae500;
+    border-bottom-color: #fae500;
+}
+
+.properties textarea:focus {
+    outline: none;
+    border-right-color: #fae500;
+    border-bottom-color: #fae500;
+}
+
+.cardsStyle {
+    background-color: rgba(0, 0, 0, 0.125);
+    backdrop-filter: blur(2px);
+    border: none;
+    width: 240px;
+    height: auto;
+    margin: 0px 0px 0px 40px;
+    color: yellow;
+    margin-top: 1rem;
+}
+
+.learnMore {
+    border: 1px 0px 0px 10px solid;
+    border-color: grey;
+    background-color: rgba(0, 0, 0, 0.327);
+    color: yellow;
+}
+
+.cardBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+@font-face {
+    font-family: "starwars";
+    src: url("../fonts/STJEDISE.TTF") format("truetype");
+}
+
+/* Aplica la fuente personalizada a un elemento */
+.font {
+    font-family: "starwars", sans-serif;
+    color: #fae500;
+}
+
+.middleDiv {
+    display: flex;
+    margin-top: 3rem;
+    height: 30rem;
+}
+
+.divMiddleDiv {
+    min-height: 100%;
+}
+
+.leftContent {
+    width: 50%;
+    min-height: 100%;
+}
+
+.rightContent {
+    width: 50%;
+    min-height: 100%;
+}
+
+.lowerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem 0 2rem 0;
+}
+
+.inputFile {
+    display: flex;
+    justify-content: center;
+    background-color: black transparent;
+    border: solid 1px #fae500;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+    .generalDiv {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 100dvh;
+        color: #fae500;
+        font-weight: bold
+    }
+
+    .middleDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .leftContent {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .rightContent {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .personalizeLetters {
+        font-size: 1.4rem;
+        margin: 0;
+        margin-top: 3rem;
+    }
+
+    .properties input {
+        height: 70%;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        border-right-color: #fae50082;
+        border-bottom-color: #fae50082;
+        color: #fae500;
+        font-weight: bold;
+        width: 10rem;
+    }
+
+    .properties textarea {
+        background: transparent;
+        backdrop-filter: blur(10px);
+        border: 2px solid;
+        border-top-color: rgb(30, 30, 30);
+        border-left-color: rgb(30, 30, 30);
+        border-right-color: #fae50082;
+        border-bottom-color: #fae50082;
+        color: #fae500;
+        font-weight: bold;
+        width: 10rem;
+    }
+
+    .inputFile {
+        display: flex;
+        justify-content: center;
+        background-color: black transparent;
+        border: solid 1px #fae500;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+
+    .cardsStyle {
+        background-color: rgba(0, 0, 0, 0.125);
+        backdrop-filter: blur(2px);
+        border: none;
+        width: 240px;
+        height: auto;
+        margin: 0;
+        color: yellow;
+    }
+
+    .lowerContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem 0 2rem 0;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 768px) {
+    .generalDiv {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 100dvh;
+        color: #fae500;
+        font-weight: bold
+    }
+
+    .middleDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .leftContent {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .rightContent {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .personalizeLetters {
+        font-size: 1.8rem;
+        margin: 0;
+        margin-top: 3rem;
+    }
+
+    .properties input {
+        height: 70%;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        border-right-color: #fae50082;
+        border-bottom-color: #fae50082;
+        color: #fae500;
+        font-weight: bold;
+        width: 14rem;
+    }
+
+    .properties textarea {
+        background: transparent;
+        backdrop-filter: blur(10px);
+        border: 2px solid;
+        border-top-color: rgb(30, 30, 30);
+        border-left-color: rgb(30, 30, 30);
+        border-right-color: #fae50082;
+        border-bottom-color: #fae50082;
+        color: #fae500;
+        font-weight: bold;
+        width: 14rem;
+    }
+
+    .inputFile {
+        display: flex;
+        justify-content: center;
+        background-color: black transparent;
+        border: solid 1px #fae500;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+
+    .cardsStyle {
+        background-color: rgba(0, 0, 0, 0.125);
+        backdrop-filter: blur(2px);
+        border: none;
+        width: 240px;
+        height: auto;
+        margin: 0;
+        color: yellow;
+    }
+
+    .lowerContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem 0 2rem 0;
+    }
+}

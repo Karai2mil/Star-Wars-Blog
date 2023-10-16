@@ -1,0 +1,1060 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.notLoadMainDiv {
+    background-image: url('/Users/karai/Desktop/Programacion/StarWars/starwars/src/front/img/fondoEstrellas.png');
+    height: 100dvh;
+    width: 100vw;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titles {
+    display: flex;
+    margin: 20px 0px 20px 100px;
+}
+
+.generalCardsDiv {
+    width: 95%;
+}
+
+.cardsOverflow {
+    display: flex;
+    overflow-x: scroll;
+    padding: 0;
+}
+
+.overflowHeightCharacter {
+    height: 490px;
+}
+
+.overflowHeightPlanet {
+    height: 430px;
+}
+
+.overflowHeightStarship {
+    height: 375px;
+}
+
+.cardsOverflow:hover::-webkit-scrollbar {
+    height: 5px;
+    width: 10px;
+}
+
+.cardsOverflow:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(251, 255, 8);
+    height: 3px;
+    width: 1px;
+}
+
+
+.cardsStyle {
+    background-color: rgba(0, 0, 0, 0.125);
+    backdrop-filter: blur(2px);
+    border: none;
+    width: 240px;
+    height: auto;
+    margin: 0px 0px 0px 40px;
+    color: yellow;
+}
+
+.cardImg {
+    object-fit: cover;
+    height: auto;
+    object-position: top;
+}
+
+.cardsStylePlanets {
+    background-color: rgba(0, 0, 0, 0.125);
+    backdrop-filter: blur(2px);
+    border: none;
+    width: 240px;
+    height: auto;
+    margin: 0px 0px 0px 40px;
+    color: yellow;
+}
+
+.cardsStyleShips {
+    background-color: rgba(0, 0, 0, 0.125);
+    backdrop-filter: blur(2px);
+    border: none;
+    width: 240px;
+    height: auto;
+    margin: 0px 0px 0px 40px;
+    color: yellow;
+}
+
+.dropdown {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.313);
+    backdrop-filter: blur(5px);
+    color: yellow;
+}
+
+.li::placeholder {
+    color: black;
+}
+
+.dropdownContent {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 10px 10px;
+
+}
+
+.modal {
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 800px;
+    height: auto;
+}
+
+.modalProperties {
+    border-bottom: solid;
+    border-bottom-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: auto;
+    margin-left: 5%;
+}
+
+.modalDescription {
+    width: 650px;
+    padding-top: 20px;
+    text-align: end;
+}
+
+.modalProperties p {
+    margin: 3% 0%;
+}
+
+.modalImageDiv {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalPropertiesDiv {
+    width: 58%;
+}
+
+.modalPlanet {
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: auto;
+    height: auto;
+}
+
+.modalDescriptionPlanet {
+    width: 750px;
+    padding-top: 20px;
+    text-align: end;
+}
+
+.modalImageDivPlanets {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalPropertiesDivPlanets {
+    width: 50%;
+}
+
+.modalShip {
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: 800px;
+    height: auto;
+}
+
+.modalDescriptionShips {
+    width: 750px;
+    padding-top: 20px;
+    text-align: end;
+}
+
+.modalImageDivShips {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalPropertiesDivShips {
+    width: 50%;
+}
+
+.cardBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.favoritesDeleteBtn:hover {
+    cursor: pointer;
+    color: rgb(255, 213, 0);
+}
+
+.favoritos {
+    text-decoration: underline;
+}
+
+.favoritos:hover {
+    cursor: pointer;
+    color: rgb(255, 213, 0);
+}
+
+.learnMore {
+    border: 1px 0px 0px 10px solid;
+    border-color: grey;
+    background-color: rgba(0, 0, 0, 0.327);
+    color: yellow;
+}
+
+.loadingCircleDiv {
+    position: absolute;
+    bottom: 60%;
+    left: 100%;
+}
+
+.loadingCircle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 0.5rem solid transparent;
+    border-top-color: yellow;
+    border-bottom-color: yellow;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.overlay {
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.overlayCreate {
+    padding-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginInputs {
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    color: #f8da2d;
+    border: solid #f8da2d;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-right: 2rem;
+    width: 13rem;
+}
+
+.loginInputs::placeholder {
+    color: #f8da2d;
+}
+
+.loginInputs:focus {
+    outline: none;
+    border-color: #f5dd00;
+    box-shadow: 0 0 20px rgba(245, 221, 0, 0.5);
+}
+
+@font-face {
+    font-family: "starwars";
+    src: url("../fonts/STJEDISE.TTF") format("truetype");
+}
+
+/* Aplica la fuente personalizada a un elemento */
+.font {
+    font-family: "starwars", sans-serif;
+    color: #fae500;
+}
+
+h5,
+p {
+    font-weight: bold;
+}
+
+.confirmBtn {
+    color: #fae500;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    font-size: smaller;
+    font-family: "starwars", sans-serif;
+    font-weight: bold;
+    height: 1.8rem;
+    border-top-color: rgb(3, 3, 3);
+    border-left-color: rgb(30, 30, 30);
+    border-right-color: #fae500;
+    border-bottom-color: #fae500;
+    margin-left: 1.5rem;
+}
+
+.createAccountText {
+    padding-top: 1rem;
+    cursor: pointer;
+    margin-bottom: 2.65rem;
+}
+
+.validationIcons {
+    color: #fae500;
+    position: absolute;
+    margin-left: 11.4rem;
+    margin-top: 0.45rem;
+}
+
+.validationIconsPassword {
+    color: #fae500;
+    position: absolute;
+    margin-left: 11.4rem;
+    margin-top: 0.74rem;
+}
+
+.background_rotate {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    animation: rotateBackground 60s linear infinite;
+    /* Ajusta la duración y el timing function según tus necesidades */
+}
+
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Un giro completo de 360 grados */
+    }
+}
+
+.background_container {
+    position: relative;
+    overflow: hidden;
+}
+
+.starWarsLetters {
+    width: 40%;
+}
+
+.starWarsLettersCreate {
+    width: 40%;
+    margin-top: 1.5rem;
+}
+
+.beCarefulManDiv {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 8%;
+}
+
+.navbarLetter {
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin: 0;
+    margin-right: 2rem;
+}
+
+.navbarImg {
+    object-fit: cover;
+    width: 40%;
+    margin: 0;
+}
+
+.divForSmartphone {
+    display: none;
+}
+
+.divForComputer {
+    display: block;
+}
+
+.navbarDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapse {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding: 0.3rem 0rem;
+}
+
+.caret {
+    color: #fae500;
+    font-size: 2rem;
+}
+
+.buttonOutline:focus {
+    outline: none;
+}
+
+@media (max-width: 374px) {
+    .navbarLetter {
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 0.7rem;
+        margin: 0;
+        margin-right: 1rem;
+    }
+
+    .navbarImg {
+        object-fit: cover;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .divForSmartphone {
+        display: block;
+    }
+
+    .divForComputer {
+        display: none;
+    }
+
+    .navbarDiv {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .collapse {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        padding: 0.3rem 0rem;
+    }
+
+    .starWarsLetters {
+        width: 80%;
+    }
+
+    .starWarsLettersCreate {
+        width: 80%;
+        margin-top: 1.5rem;
+    }
+
+    .cardsOverflow {
+        display: flex;
+        overflow-x: scroll;
+        padding: 0;
+    }
+    
+    .overflowHeightCharacter {
+        height: 490px;
+    }
+    
+    .overflowHeightPlanet {
+        height: 430px;
+    }
+    
+    .overflowHeightStarship {
+        height: 375px;
+    }
+    
+    .cardImg {
+        object-fit: cover;
+        height: auto;
+        object-position: top;
+    }
+
+    .cardsStyle {
+        background-color: rgba(0, 0, 0, 0.125);
+        backdrop-filter: blur(2px);
+        border: none;
+        width: 240px;
+        height: auto;
+        margin: 0px 0px 0px 40px;
+        color: yellow;
+    }
+
+    .characterCardImg {
+        object-fit: cover;
+        height: 240px;
+        object-position: top;
+    }
+    .beCarefulManDiv {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        width: 20%;
+    }
+    .titles {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .modal {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        border: none;
+        width: 350px;
+        height: auto;
+    }
+    
+    .modalProperties {
+        border-bottom: solid;
+        border-bottom-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: auto;
+        margin-left: 5%;
+    }
+    
+    .modalDescription {
+        width: 90%;
+        padding-top: 20px;
+        text-align:center
+    }
+    
+    .modalProperties p {
+        margin: 3% 0%;
+    }
+    
+    .modalImageDiv {
+        width: 90%;
+    }
+    
+    .modalPropertiesDiv {
+        width: 90%;
+    }
+
+    .modalForPhones {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modalPlanet {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        width: 350px;
+        height: auto;
+    }
+
+    .modalDescriptionPlanet {
+        width: 90%;
+        padding-top: 20px;
+        text-align: center;
+    }
+    
+    .modalImageDivPlanets {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalPropertiesDivPlanets {
+        width: 90%;
+    }
+
+    .modalShip {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        width: 350px;
+        height: auto;
+    }
+    
+    .modalDescriptionShips {
+        width: 90%;
+        padding-top: 20px;
+        text-align: center;
+    }
+    
+    .modalImageDivShips {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalPropertiesDivShips {
+        width: 90%;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 500px) {
+    .overlay {
+        padding-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .overlayCreate {
+        padding-top: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .starWarsLetters {
+        width: 80%;
+    }
+
+    .starWarsLettersCreate {
+        width: 80%;
+        margin-top: 1.15rem;
+    }
+
+    .beCarefulManDiv {
+        margin-top: auto;
+        left: 5%;
+        width: 20%;
+    }
+
+    .navbarLetter {
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin: 0;
+        margin-right: 1rem;
+    }
+
+    .navbarImg {
+        object-fit: cover;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .divForSmartphone {
+        display: block;
+    }
+
+    .divForComputer {
+        display: none;
+    }
+
+    .navbarDiv {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .collapse {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        padding: 0.3rem 0rem;
+    }
+    .titles {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .cardsOverflow {
+        display: flex;
+        overflow-x: scroll;
+        padding: 0;
+    }
+    
+    .overflowHeightCharacter {
+        height: 490px;
+    }
+    
+    .overflowHeightPlanet {
+        height: 430px;
+    }
+    
+    .overflowHeightStarship {
+        height: 375px;
+    }
+    
+    .cardImg {
+        object-fit: cover;
+        height: auto;
+        object-position: top;
+    }
+
+    .modal {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        border: none;
+        width: 350px;
+        height: auto;
+    }
+    
+    .modalProperties {
+        border-bottom: solid;
+        border-bottom-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: auto;
+        margin-left: 5%;
+    }
+    
+    .modalDescription {
+        width: 90%;
+        padding-top: 20px;
+        text-align:center
+    }
+    
+    .modalProperties p {
+        margin: 3% 0%;
+    }
+    
+    .modalImageDiv {
+        width: 90%;
+    }
+    
+    .modalPropertiesDiv {
+        width: 90%;
+    }
+
+    .modalForPhones {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modalPlanet {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        width: 350px;
+        height: auto;
+    }
+
+    .modalDescriptionPlanet {
+        width: 90%;
+        padding-top: 20px;
+        text-align: center;
+    }
+    
+    .modalImageDivPlanets {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalPropertiesDivPlanets {
+        width: 90%;
+    }
+
+    .modalShip {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        width: 350px;
+        height: auto;
+    }
+    
+    .modalDescriptionShips {
+        width: 90%;
+        padding-top: 20px;
+        text-align: center;
+    }
+    
+    .modalImageDivShips {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalPropertiesDivShips {
+        width: 90%;
+    }
+
+}
+
+@media (min-width: 501px) and (max-width: 1024px) {
+    .overlay {
+        padding-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .overlayCreate {
+        padding-top: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .starWarsLetters {
+        width: 60%;
+    }
+
+    .starWarsLettersCreate {
+        width: 60%;
+        margin-top: 1.38rem;
+    }
+
+    .beCarefulManDiv {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        width: 12%;
+    }
+
+    .navbarLetter {
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 1rem;
+        margin: 0;
+        margin-right: 2rem;
+    }
+
+    .divForSmartphone {
+        display: none;
+    }
+
+    .divForComputer {
+        display: block;
+    }
+
+    .caret {
+        color: #fae500;
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .modal {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        border: none;
+        width: 600px;
+        height: auto;
+    }
+    
+    .modalProperties {
+        border-bottom: solid;
+        border-bottom-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: auto;
+        margin-left: 5%;
+    }
+    
+    .modalDescription {
+        width: 530px;
+        padding-top: 20px;
+        text-align: end;
+    }
+    
+    .modalProperties p {
+        margin: 3% 0%;
+    }
+    
+    .modalImageDiv {
+        width: 50%;
+    }
+    
+    .modalPropertiesDiv {
+        width: 50%;
+    }
+
+    .modalPlanet {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        width: 600px;
+        height: auto;
+    }
+
+    .modalDescriptionPlanet {
+        width: 530px;
+        padding-top: 20px;
+        text-align: end;
+    }
+    
+    .modalImageDivPlanets {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalPropertiesDivPlanets {
+        width: 50%;
+    }
+
+    .modalShip {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        width: 600px;
+        height: auto;
+    }
+    
+    .modalDescriptionShips {
+        width: 530px;
+        padding-top: 20px;
+        text-align: end;
+    }
+    
+    .modalImageDivShips {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalPropertiesDivShips {
+        width: 50%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    .modal {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        border: none;
+        width: 450px;
+        height: auto;
+    }
+    
+    .modalProperties {
+        border-bottom: solid;
+        border-bottom-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: auto;
+        margin-left: 5%;
+    }
+    
+    .modalDescription {
+        width: 400px;
+        padding-top: 20px;
+        text-align: end;
+    }
+    
+    .modalProperties p {
+        margin: 3% 0%;
+    }
+    
+    .modalImageDiv {
+        width: 50%;
+    }
+    
+    .modalPropertiesDiv {
+        width: 50%;
+    }
+
+    .modalPlanet {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        width: 450px;
+        height: auto;
+    }
+
+    .modalDescriptionPlanet {
+        width: 400px;
+        padding-top: 20px;
+        text-align: end;
+    }
+    
+    .modalImageDivPlanets {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalPropertiesDivPlanets {
+        width: 50%;
+    }
+
+    .modalShip {
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        width: 450px;
+        height: auto;
+    }
+    
+    .modalDescriptionShips {
+        width: 400px;
+        padding-top: 20px;
+        text-align: end;
+    }
+    
+    .modalImageDivShips {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modalPropertiesDivShips {
+        width: 50%;
+    }
+}
