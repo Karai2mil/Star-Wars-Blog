@@ -76,6 +76,7 @@ const CharacterCard = ({ character }) => {
                     <div className="card-body">
                         <img
                             src={character.image_url}
+                            style={{height: '285px'}}                           
                             className={`card-img-top ${styles.cardImg}`}
                             alt="..."
                         />

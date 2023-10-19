@@ -21,7 +21,7 @@ const Home = () => {
             actions.getStarShips()
             actions.getFavorites()
 		} else {
-			navigate('/Login');
+			navigate('/');
 		}
 	}, [])
 

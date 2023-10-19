@@ -92,7 +92,7 @@ const Favorites = () => {
                             )
                         })
                     ) : (
-                        <p style={{ margin: '10px 10px 10px 10px' }}>No favorite StarShips yet</p>
+                        <p style={{ margin: '10px 10px 10px 10px' }}>No favorite starships yet</p>
                     )
                 }
 

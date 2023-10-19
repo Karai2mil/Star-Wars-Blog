@@ -76,6 +76,7 @@ const PlanetsCard = ({ planets }) => {
                     <div className="card-body">
                         <img
                             src={planets.image_url}
+                            style={{height: '210px'}}                           
                             className={`card-img-top ${styles.cardImg}`}                            
                             alt="..."
                         />

@@ -71,8 +71,9 @@ body {
 
 .cardImg {
     object-fit: cover;
-    height: auto;
-    object-position: top;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
 }
 
 .cardsStylePlanets {
@@ -330,6 +331,10 @@ p {
     margin-bottom: 2.65rem;
 }
 
+.hoverColor:hover{
+    color: #fafa00;
+}
+
 .validationIcons {
     color: #fae500;
     position: absolute;
@@ -420,14 +425,24 @@ p {
     padding: 0.3rem 0rem;
 }
 
-.caret {
+.caretClosed {
     color: #fae500;
     font-size: 2rem;
 }
 
-.buttonOutline:focus {
-    outline: none;
+.caretOpen {
+    width: 30px;
+    color: #fae500;
+    font-size: 2rem;
+    background: radial-gradient(circle at center, #000000, #fae50049 100%);
+    box-shadow: 0 0 60px 5px #fae500;
+    border-radius: 50%;
 }
+
+.buttonOutline:focus {
+    box-shadow: none;
+}
+
 
 @media (max-width: 374px) {
     .navbarLetter {
@@ -621,6 +636,15 @@ p {
     
     .modalPropertiesDivShips {
         width: 90%;
+    }
+
+    .caretOpen {
+        width: 30px;
+        color: #fae500;
+        font-size: 2rem;
+        background: radial-gradient(circle at center, #000000, #fae50028 100%);
+        box-shadow: none;
+        border-radius: 50%;
     }
 }
 
@@ -818,6 +842,14 @@ p {
         width: 90%;
     }
 
+    .caretOpen {
+        width: 30px;
+        color: #fae500;
+        font-size: 2rem;
+        background: radial-gradient(circle at center, #000000, #fae50028 100%);
+        box-shadow: none;
+        border-radius: 50%;
+    }
 }
 
 @media (min-width: 501px) and (max-width: 1024px) {

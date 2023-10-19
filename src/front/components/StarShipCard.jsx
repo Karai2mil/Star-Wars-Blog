@@ -76,7 +76,8 @@ const PlanetsCard = ({ starship }) => {
                     <div className="card-body" style={{ height: "auto" }}>
                         <img
                             src={starship.image_url}
-                            className={`card-img-top ${styles.cardImg}`}                            
+                            style={{height: '140px'}}                           
+                            className={`card-img-top ${styles.cardImg}`} 
                             alt="..."
                         />
                         <h5 className="card-title" style={{ marginTop: "10px", height: "40px" }}>{starship.name}</h5>

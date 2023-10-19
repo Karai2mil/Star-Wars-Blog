@@ -8,6 +8,7 @@ const Navbar = () => {
 
     const navigate = useNavigate()
     const [collapseType, setCollapseType] = useState('')
+    const [isCollapseOpen, setIsCollapseOpen] = useState(false)
 
     const handlerLogOut = () => {
         localStorage.removeItem("token");
@@ -47,8 +48,8 @@ const Navbar = () => {
                         </div>
                         <div className="d-flex">
                             <div className={styles.divForComputer}>
-                                <button className={`btn ${styles.buttonOutline}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                    <i className={`fa-solid fa-caret-left ${styles.caret}`}></i>
+                                <button onClick={() => setIsCollapseOpen(!isCollapseOpen)} className={`btn ${styles.buttonOutline}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    <i className={`fa-solid fa-caret-left ${isCollapseOpen ? (styles.caretOpen) : (styles.caretClosed)}`}></i>
                                 </button>
                             </div>
                             <div className={collapseType} id="collapseExample">
@@ -96,8 +97,8 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className={styles.divForSmartphone}>
-                            <button className="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                <i className={`fa-solid fa-caret-down ${styles.caret}`}></i>
+                            <button onClick={() => setIsCollapseOpen(!isCollapseOpen)} className={`btn ${styles.buttonOutline}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                <i className={`fa-solid fa-caret-down ${isCollapseOpen ? (styles.caretOpen) : (styles.caretClosed)}`}></i>
                             </button>
                         </div>
                         <div className={styles.divForSmartphone} style={{ width: '40%' }}>

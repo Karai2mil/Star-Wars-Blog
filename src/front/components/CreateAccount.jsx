@@ -50,7 +50,7 @@ const CreateAccount = () => {
                 handleAlert('User created succesfully! Please log in')
                 setTimeout(() => {
                     navigate('/');
-                }, 5000)
+                }, 3000)
             }
         } catch (error) {
             if (error.errorType === 'ValidationError') {
@@ -152,8 +152,8 @@ const CreateAccount = () => {
                     }
                 </div>
                 <div className='d-flex flex-column justify-content-center align-items-center'>
-                    <p onClick={() => handlerCreateUser()} className={styles.font} style={{ marginTop: '1rem', cursor: 'pointer' }}>CREATE ACouNT</p>
-                    <p onClick={() => handlerNavigateLogIn()} className={styles.font} style={{ cursor: 'pointer' }}>LoG iN</p>
+                    <p onClick={() => handlerCreateUser()} className={`${styles.font} ${styles.hoverColor}`} style={{ marginTop: '1rem', cursor: 'pointer' }}>CREATE ACouNT</p>
+                    <p onClick={() => handlerNavigateLogIn()} className={`${styles.font} ${styles.hoverColor}`} style={{ cursor: 'pointer' }}>LoG iN</p>
                 </div>
                 <img className={styles.starWarsLettersCreate} src={letrasConIconos} alt="" />
             </div>

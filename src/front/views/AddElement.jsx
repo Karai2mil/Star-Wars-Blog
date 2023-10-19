@@ -16,7 +16,7 @@ const AddElement = () => {
 
     const [element, setElement] = useState('null')
     const character_properties = ['name', 'gender', 'height', 'mass', 'hair_color', 'skin_color', 'eye_color', 'birth_year']
-    const planet_properties = ['name', 'diameter', 'rotation_period', 'orbital_period', 'gravity', 'population', 'climate', 'terrain', 'surface_water']
+    const planet_properties = ['name', 'diameter', 'rotation_period', 'orbital_period', 'gravity', 'population', 'climate', 'terrain']
     const starship_properties = ['name', 'model', 'manufacturer', 'cost_in_credits', 'length', 'crew', 'hyperdrive_rating', 'MGLT', 'cargo_capacity']
     const defaultImage = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5298bac0-b8bf-4c80-af67-725c1272dbb0/dbz4y4u-af9109e8-a1f5-457e-ae59-963ca80ce021.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUyOThiYWMwLWI4YmYtNGM4MC1hZjY3LTcyNWMxMjcyZGJiMFwvZGJ6NHk0dS1hZjkxMDllOC1hMWY1LTQ1N2UtYWU1OS05NjNjYTgwY2UwMjEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ms-WqF8knvqQCjmU4cEkteDf7sr3mzm2eEQTwnaZ7nc'
     const [cardImage, setCardImage] = useState('')
@@ -49,7 +49,6 @@ const AddElement = () => {
         population: '',
         climate: '',
         terrain: '',
-        surface_water: '',
         description: '',
         image_url: defaultImage,
         is_added: true
@@ -206,9 +205,9 @@ const AddElement = () => {
                 <div className={styles.divMiddleDiv}>
                     <div className={styles.middleDiv}>
                         <div className={`${styles.centerDiv} ${styles.leftContent} flex-column`}>
-                            <div className={` d-flex flex-column align-items-center`}>
+                            <div className={`d-flex flex-column align-items-center`}>
                                 <label style={{ width: '250px' }} htmlFor="element">Wich card do you want to add?</label>
-                                <select className="w-50" onChange={(e) => handleSelectedElement(e.target.value)} id="element" name="elements">
+                                <select className={styles.select} onChange={(e) => handleSelectedElement(e.target.value)} id="element" name="elements">
                                     <option value="null">Select</option>
                                     <option value="character">Character</option>
                                     <option value="planet">Planet</option>
@@ -238,7 +237,7 @@ const AddElement = () => {
                                                 <textarea onChange={(e) => handleInputChange(e)} value={character['description']} type="text" name='description' maxLength='500' />
                                             </div>
                                             <div className={styles.inputFile}>
-                                                <label style={{cursor: 'pointer'}} htmlFor="card_image">Select your card image</label>
+                                                <label style={{ cursor: 'pointer' }} htmlFor="card_image">Select your card image</label>
                                                 <input onChange={(e) => handleImageChange(e)} type="file" id="card_image" />
                                             </div>
                                         </div>
@@ -266,7 +265,7 @@ const AddElement = () => {
                                                 <textarea onChange={(e) => handleInputChange(e)} value={planet['description']} type="text" name='description' maxLength='500' />
                                             </div>
                                             <div className={styles.inputFile}>
-                                                <label style={{cursor: 'pointer'}} htmlFor="card_image">Select your card image</label>
+                                                <label style={{ cursor: 'pointer' }} htmlFor="card_image">Select your card image</label>
                                                 <input onChange={(e) => handleImageChange(e)} type="file" id="card_image" />
                                             </div>
                                         </div>
@@ -294,8 +293,8 @@ const AddElement = () => {
                                                 <textarea onChange={(e) => handleInputChange(e)} value={starship['description']} type="text" name='description' maxLength='500' />
                                             </div>
                                             <div className={styles.inputFile}>
-                                                <label style={{cursor: 'pointer'}} htmlFor="card_image">Select your card image</label>
-                                                <input onChange={(e) => handleImageChange(e)} type="file" id="card_image"/>
+                                                <label style={{ cursor: 'pointer' }} htmlFor="card_image">Select your card image</label>
+                                                <input onChange={(e) => handleImageChange(e)} type="file" id="card_image" />
                                             </div>
                                         </div>
                                     )

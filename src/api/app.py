@@ -761,6 +761,7 @@ def addCard():
             db.session.commit()
     
         if (element == 'planet'):
+            print('llegue1')
             #Find the max uid value
             planet_with_max_uid = Planet.query.order_by(Planet.uid.desc()).first()
             user_planets = User_planet.query.filter_by(user_id=user_id).all()
@@ -770,10 +771,12 @@ def addCard():
             else:
                 max_char_uid = planet_with_max_uid.uid
                 uid = max_char_uid + 1
+            print('llegue2')
             #Save the image
             image_file = request.files.get('image_file')
-            url_cloudinary = save_to_cloudinary_file(image_file, uid , 'planet')
+            url_cloudinary = save_to_cloudinary_file(image_file, uid, user_id, 'planet')
             #Create the card
+            print('llegue3')
             new_planet = User_planet(
                 name=form.get('name'),
                 climate=form.get('climate'),
@@ -782,7 +785,6 @@ def addCard():
                 orbital_period=form.get('orbital_period'),
                 population=form.get('population'),
                 rotation_period=form.get('rotation_period'),
-                surface_water=form.get('surface_water'),
                 terrain=form.get('terrain'),
                 description = form.get('description'),                
                 image_url=url_cloudinary,
@@ -804,7 +806,7 @@ def addCard():
                 uid = max_char_uid + 1
             #Save the image
             image_file = request.files.get('image_file')
-            url_cloudinary = save_to_cloudinary_file(image_file, uid , 'starship')            
+            url_cloudinary = save_to_cloudinary_file(image_file, uid, user_id, 'starship')            
             #Create the card
             new_starship = User_starship(
                 name=form.get('name'),

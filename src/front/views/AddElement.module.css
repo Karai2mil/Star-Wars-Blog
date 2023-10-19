@@ -139,6 +139,22 @@ input[type="file"] {
     margin: 3rem 0 2rem 0;
 }
 
+.lowerContent h3:hover{
+    color: rgb(255, 213, 0);
+}
+
+.lowerContent h3:active{
+    color: rgb(255, 162, 0)
+}
+
+.lowerContent h4:hover{
+    color: rgb(255, 213, 0);
+}
+
+.lowerContent h4:active{
+    color: rgb(255, 162, 0)
+}
+
 .inputFile {
     display: flex;
     justify-content: center;
@@ -149,6 +165,10 @@ input[type="file"] {
     margin-right: auto;
     cursor: pointer;
     margin-top: 1rem;
+}
+
+.select:focus {
+    outline: none;
 }
 
 @media (max-width: 500px) {
