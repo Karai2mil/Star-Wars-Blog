@@ -34,7 +34,7 @@ const CharacterCard = ({ character }) => {
             progress: undefined,
             style: {
                 color: "#fae500",
-                background: 'rgba(0, 0, 0, 0.4)',
+                background: 'rgba(0, 0, 0, 0.7)',
                 fontWeight: 'bold',
                 backdropFilter: 'blur(2px)',
             },
@@ -84,11 +84,11 @@ const CharacterCard = ({ character }) => {
                         <p className="card-text">Gender: {character.gender}</p>
                         <p className="card-text">Height: {character.height}</p>
                         <div className={styles.cardBtn}>
-                            <button onClick={() => actions.detailsToShow(character)} className={styles.learnMore}>Learn More</button>
+                            <button onClick={() => actions.detailsToShow(character)} className={styles.learnMore}>Learn more</button>
                             {isOnFavorite ? (
-                                <button style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-solid fa-star" style={{ color: "#fae500" }}></i></button>
+                                <button className={styles.learnMore} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-solid fa-star" style={{ color: "#fae500" }}></i></button>
                             ) : (
-                                <button onClick={() => handleAddFavorite()} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
+                                <button className={styles.learnMore} onClick={() => handleAddFavorite()} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
                             )
                             }
                             {character.is_added &&

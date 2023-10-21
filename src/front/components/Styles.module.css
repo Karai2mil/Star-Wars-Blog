@@ -228,6 +228,25 @@ body {
 }
 
 .learnMore {
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid rgb(34, 34, 34);
+    border-right: 2px solid rgb(34, 34, 34);        
+    background-color: rgba(0, 0, 0, 0.327);
+    color: yellow;
+    padding: 0px 10px;
+}
+
+.learnMore:active {
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    border-top: 2px solid rgb(34, 34, 34);
+    border-left: 2px solid rgb(34, 34, 34);        
+    background-color: rgba(0, 0, 0, 0.327);
+    color: yellow;
+}
+
+.addToFavorite {
     border: 1px 0px 0px 10px solid;
     border-color: grey;
     background-color: rgba(0, 0, 0, 0.327);
@@ -331,8 +350,8 @@ p {
     margin-bottom: 2.65rem;
 }
 
-.hoverColor:hover{
-    color: #fafa00;
+.activeColor:active{
+    color: rgb(255, 162, 0)
 }
 
 .validationIcons {
@@ -445,6 +464,26 @@ p {
 
 
 @media (max-width: 374px) {
+    .learnMore {
+        border-top: 2px solid grey;
+        border-left: 2px solid grey;
+        border-bottom: 2px solid rgb(34, 34, 34);
+        border-right: 2px solid rgb(34, 34, 34);        
+        background-color: rgba(0, 0, 0, 0.327);
+        color: yellow;
+        padding: 0px 10px;
+    }
+
+    .learnMore:active {
+        border-bottom: 2px solid grey;
+        border-right: 2px solid grey;
+        border-top: 2px solid rgb(34, 34, 34);
+        border-left: 2px solid rgb(34, 34, 34);        
+        background-color: rgba(0, 0, 0, 0.327);
+        color: yellow;
+    }
+    
+
     .navbarLetter {
         white-space: nowrap;
         cursor: pointer;
@@ -649,6 +688,25 @@ p {
 }
 
 @media (min-width: 375px) and (max-width: 500px) {
+    .learnMore {
+        border-top: 2px solid grey;
+        border-left: 2px solid grey;
+        border-bottom: 2px solid rgb(34, 34, 34);
+        border-right: 2px solid rgb(34, 34, 34);        
+        background-color: rgba(0, 0, 0, 0.327);
+        color: yellow;
+        padding: 0px 10px;
+    }
+
+    .learnMore:active {
+        border-bottom: 2px solid grey;
+        border-right: 2px solid grey;
+        border-top: 2px solid rgb(34, 34, 34);
+        border-left: 2px solid rgb(34, 34, 34);        
+        background-color: rgba(0, 0, 0, 0.327);
+        color: yellow;
+    }
+    
     .overlay {
         padding-top: 5rem;
         display: flex;

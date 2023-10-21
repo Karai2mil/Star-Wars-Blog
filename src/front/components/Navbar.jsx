@@ -49,7 +49,7 @@ const Navbar = () => {
                         <div className="d-flex">
                             <div className={styles.divForComputer}>
                                 <button onClick={() => setIsCollapseOpen(!isCollapseOpen)} className={`btn ${styles.buttonOutline}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                    <i className={`fa-solid fa-caret-left ${isCollapseOpen ? (styles.caretOpen) : (styles.caretClosed)}`}></i>
+                                    <i className={`${styles.activeColor} fa-solid fa-caret-left ${isCollapseOpen ? (styles.caretOpen) : (styles.caretClosed)}`}></i>
                                 </button>
                             </div>
                             <div className={collapseType} id="collapseExample">
@@ -57,14 +57,14 @@ const Navbar = () => {
                                     <ul className="navbar-nav ms-auto d-flex align-items-center">
                                         <li style={{ padding: 0 }}>
                                             <p
-                                                className={`${styles.font} ${styles.navbarLetter}`}
+                                                className={`${styles.font} ${styles.navbarLetter} ${styles.activeColor}`}
                                                 onClick={() => handlerLogOut()}>
                                                 LoG ouT
                                             </p>
                                         </li>
                                         <li style={{ padding: 0 }}>
                                             <p
-                                                className={`${styles.font} ${styles.navbarLetter}`}
+                                                className={`${styles.font} ${styles.navbarLetter} ${styles.activeColor}`}
                                                 onClick={() => navigateNewCard()}>
                                                 create My card
                                             </p>
@@ -80,7 +80,7 @@ const Navbar = () => {
                                                 style={{ color: "yellow" }}
                                             >
                                                 <p
-                                                    className={`${styles.font} ${styles.navbarLetter}`}
+                                                    className={`${styles.font} ${styles.navbarLetter} ${styles.activeColor}`}
                                                     style={{ margin: 0 }}>
                                                     favorites
                                                 </p>
@@ -98,7 +98,7 @@ const Navbar = () => {
                         </div>
                         <div className={styles.divForSmartphone}>
                             <button onClick={() => setIsCollapseOpen(!isCollapseOpen)} className={`btn ${styles.buttonOutline}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                <i className={`fa-solid fa-caret-down ${isCollapseOpen ? (styles.caretOpen) : (styles.caretClosed)}`}></i>
+                                <i className={`${styles.activeColor} fa-solid fa-caret-down ${isCollapseOpen ? (styles.caretOpen) : (styles.caretClosed)}`}></i>
                             </button>
                         </div>
                         <div className={styles.divForSmartphone} style={{ width: '40%' }}>

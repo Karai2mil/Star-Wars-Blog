@@ -207,7 +207,7 @@ const AddElement = () => {
                         <div className={`${styles.centerDiv} ${styles.leftContent} flex-column`}>
                             <div className={`d-flex flex-column align-items-center`}>
                                 <label style={{ width: '250px' }} htmlFor="element">Wich card do you want to add?</label>
-                                <select className={styles.select} onChange={(e) => handleSelectedElement(e.target.value)} id="element" name="elements">
+                                <select className={`${styles.select}`} onChange={(e) => handleSelectedElement(e.target.value)} id="element" name="elements">
                                     <option value="null">Select</option>
                                     <option value="character">Character</option>
                                     <option value="planet">Planet</option>
@@ -334,7 +334,7 @@ const AddElement = () => {
                                             <p className="card-text">Propertie:</p>
                                             <div className={styles.cardBtn}>
                                                 <button onClick={() => handleNoCardSelectedAlert()} className={styles.learnMore}>Learn More</button>
-                                                <button style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
+                                                <button className={styles.learnMore} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
                                             </div>
                                         </div>
                                     }
@@ -348,8 +348,8 @@ const AddElement = () => {
                                             <p className="card-text">Gender:{character['gender']}</p>
                                             <p className="card-text">Height:{character['height']}</p>
                                             <div className={styles.cardBtn}>
-                                                <button onClick={() => actions.detailsToShow(character, true)} className={styles.learnMore}>Learn More</button>
-                                                <button style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
+                                                <button className={styles.learnMore} onClick={() => actions.detailsToShow(character, true)}>Learn More</button>
+                                                <button className={styles.learnMore} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
                                             </div>
                                         </div>
                                     }
@@ -363,8 +363,8 @@ const AddElement = () => {
                                             <p className="card-text">Diameter: {planet['diameter']} km</p>
                                             <p className="card-text">Climate: {planet['climate']}</p>
                                             <div className={styles.cardBtn}>
-                                                <button onClick={() => actions.detailsToShowPlanets(planet, true)} className={styles.learnMore}>Learn More</button>
-                                                <button style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
+                                                <button className={styles.learnMore} onClick={() => actions.detailsToShowPlanets(planet, true)}>Learn More</button>
+                                                <button className={styles.learnMore} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
                                             </div>
                                         </div>
                                     }
@@ -378,8 +378,8 @@ const AddElement = () => {
                                             <p className="card-text">Model: {starship['model']}</p>
                                             <p className="card-text">Crew: {starship['crew']}</p>
                                             <div className={styles.cardBtn}>
-                                                <button onClick={() => actions.detailsToShowShips(starship, true)} className={styles.learnMore}>Learn More</button>
-                                                <button style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
+                                                <button className={styles.learnMore} onClick={() => actions.detailsToShowShips(starship, true)}>Learn More</button>
+                                                <button className={styles.learnMore} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
                                             </div>
                                         </div>
                                     }

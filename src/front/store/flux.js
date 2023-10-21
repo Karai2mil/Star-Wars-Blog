@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			url: 'http://127.0.0.1:3001/',
+			url: 'http://192.168.1.5:3001/',
 			user_id: '',
 			tokenObtained: false,
 			characters: [],

@@ -36,6 +36,8 @@ input[type="file"] {
     height: 70%;
     background: transparent;
     backdrop-filter: blur(10px);
+    border-top-color: grey;
+    border-left-color: grey;    
     border-right-color: #fae50082;
     border-bottom-color: #fae50082;
     color: #fae500;
@@ -89,8 +91,20 @@ input[type="file"] {
 }
 
 .learnMore {
-    border: 1px 0px 0px 10px solid;
-    border-color: grey;
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid rgb(34, 34, 34);  
+    border-right: 2px solid rgb(34, 34, 34);        
+    background-color: rgba(0, 0, 0, 0.327);
+    color: yellow;
+    padding: 0px 10px;
+}
+
+.learnMore:active {
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    border-top: 2px solid rgb(34, 34, 34);
+    border-left: 2px solid rgb(34, 34, 34);        
     background-color: rgba(0, 0, 0, 0.327);
     color: yellow;
 }
@@ -139,19 +153,15 @@ input[type="file"] {
     margin: 3rem 0 2rem 0;
 }
 
-.lowerContent h3:hover{
-    color: rgb(255, 213, 0);
-}
-
 .lowerContent h3:active{
     color: rgb(255, 162, 0)
 }
 
-.lowerContent h4:hover{
-    color: rgb(255, 213, 0);
+.lowerContent h4:active{
+    color: rgb(255, 162, 0)
 }
 
-.lowerContent h4:active{
+.activeColor:active{
     color: rgb(255, 162, 0)
 }
 
@@ -159,7 +169,10 @@ input[type="file"] {
     display: flex;
     justify-content: center;
     background-color: black transparent;
-    border: solid 1px #fae500;
+    border-top: 2px solid rgb(30, 30, 30);
+    border-left: 2px solid rgb(30, 30, 30);
+    border-right: 2px solid #fae50082;
+    border-bottom: 2px solid #fae50082;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -167,11 +180,48 @@ input[type="file"] {
     margin-top: 1rem;
 }
 
+.inputFile:active {
+    border-bottom: 2px solid rgb(30, 30, 30);
+    border-right: 2px solid rgb(30, 30, 30);
+    border-left: 2px solid #fae50082;
+    border-top: 2px solid #fae50082;
+}
+
+.select{
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid rgb(34, 34, 34);
+    border-right: 2px solid rgb(34, 34, 34);        
+    background-color: rgba(0, 0, 0, 0.327);
+    color: yellow; 
+}
+
 .select:focus {
     outline: none;
 }
 
+
+
 @media (max-width: 500px) {
+    .learnMore {
+        border-top: 2px solid grey;
+        border-left: 2px solid grey;
+        border-bottom: 2px solid rgb(34, 34, 34);
+        border-right: 2px solid rgb(34, 34, 34);        
+        background-color: rgba(0, 0, 0, 0.327);
+        color: yellow;
+        padding: 0px 10px;
+    }
+
+    .learnMore:active {
+        border-bottom: 2px solid grey;
+        border-right: 2px solid grey;
+        border-top: 2px solid rgb(34, 34, 34);
+        border-left: 2px solid rgb(34, 34, 34);        
+        background-color: rgba(0, 0, 0, 0.327);
+        color: yellow;
+    }
+
     .generalDiv {
         background-repeat: no-repeat;
         background-size: cover;
@@ -210,13 +260,15 @@ input[type="file"] {
         height: 70%;
         background: transparent;
         backdrop-filter: blur(10px);
+        border-top-color: rgb(30, 30, 30);
+        border-left-color: rgb(30, 30, 30); 
         border-right-color: #fae50082;
         border-bottom-color: #fae50082;
         color: #fae500;
         font-weight: bold;
         width: 10rem;
     }
-
+    
     .properties textarea {
         background: transparent;
         backdrop-filter: blur(10px);
@@ -234,12 +286,22 @@ input[type="file"] {
         display: flex;
         justify-content: center;
         background-color: black transparent;
-        border: solid 1px #fae500;
+        border-top: 2px solid rgb(30, 30, 30);
+        border-left: 2px solid rgb(30, 30, 30);
+        border-right: 2px solid #fae50082;
+        border-bottom: 2px solid #fae50082;
         width: 80%;
         margin-left: auto;
         margin-right: auto;
         cursor: pointer;
         margin-top: 1rem;
+    }
+    
+    .inputFile:active {
+        border-bottom: 2px solid rgb(30, 30, 30);
+        border-right: 2px solid rgb(30, 30, 30);
+        border-left: 2px solid #fae50082;
+        border-top: 2px solid #fae50082;
     }
 
     .cardsStyle {

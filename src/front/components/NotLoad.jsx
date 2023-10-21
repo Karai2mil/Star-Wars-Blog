@@ -104,7 +104,7 @@ const NotLoad = () => {
                     }} type="button" className="btn btn-outline-dark">
                         <p className={styles.font} style={{ color: 'black' }}>S u B M i T</p>
                     </button>
-                    <p onClick={() => createAccountClick()} className={`${styles.font} ${styles.createAccountText} ${styles.hoverColor}`}>oR CREATE AN ACouNT</p>
+                    <p onClick={() => createAccountClick()} className={`${styles.font} ${styles.createAccountText} ${styles.activeColor}`}>oR CREATE AN ACouNT</p>
                 </div>
                 <div className={styles.centerDiv}>
                     <img className={styles.starWarsLetters} src={letrasConIconos} alt="" />

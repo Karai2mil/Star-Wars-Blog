@@ -45,7 +45,7 @@ const PlanetsCard = ({ starship }) => {
 
     const handleDeleteCard = async () => {
         const deleteFetch = await actions.deleteAddedCard(starship.uid, 'starship')
-        if (deleteFetch.message == 'COMPLETED') {
+        if (deleteFetch.message === 'COMPLETED') {
             window.location.reload()
         }
     }
@@ -86,9 +86,9 @@ const PlanetsCard = ({ starship }) => {
                         <div className={styles.cardBtn}>
                             <button onClick={() => actions.detailsToShowShips(starship)} className={styles.learnMore}>Learn More</button>
                             {isOnFavorite ? (
-                                <button style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-solid fa-star" style={{ color: "#fae500" }}></i></button>
+                                <button className={styles.learnMore} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-solid fa-star" style={{ color: "#fae500" }}></i></button>
                             ) : (
-                                <button onClick={() => handleAddFavorite()} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
+                                <button className={styles.learnMore} onClick={() => handleAddFavorite()} style={{ backgroundColor: "rgba(0, 0, 0, 0.327)" }} href="#"><i className="fa-regular fa-star" style={{ color: "#fae500" }}></i></button>
                             )
                             }
                             {starship.is_added &&
