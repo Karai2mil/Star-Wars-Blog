@@ -58,7 +58,7 @@ Once both servers are active, access the application in your browser by entering
     http://localhost:3000
 
 ## Charging initial data
-The page is equipped with a file containing all the characters, planets, and starships to enrich your information page. To enrich your information page, follow the steps below, or refer to the [API Structure](#api-structure) to create your custom data:
+The page is equipped with a file containing all the characters, planets, and starships to enrich your information page. To get started, follow the steps below, or refer to the [API Structure](#api-structure) to create your custom data:
 
 **1.** You need to have finished all the instalation instructions. If you have problems with this section, please use [Contact](#contact).
 
@@ -97,6 +97,10 @@ The page is equipped with a file containing all the characters, planets, and sta
 * Delete favorite character
 * Delete favorite planet
 * Delete favorite starship
+
+[**6. Create my card**](#create-my-card)
+
+* Post card
 
 
 ### User
@@ -331,6 +335,69 @@ The page is equipped with a file containing all the characters, planets, and sta
         'user_id': user_id
         '(character, planet, starship)_id': (character, planet, starship)_id
     }
+
+### Create my card
+
+**Post card**
+
+    route('/addCard'), method('POST')
+    
+    To add a Character:
+    
+    body: formData(
+        "name": character_name,
+        "birth_year": character_birth_year,
+        "eye_color": character_eye_color,
+        "hair_color": character_hair_color,
+        "skin_color": character_skin_color,
+        "gender": character_gender,
+        "height": character_height,
+        "mass": character_mass,
+        "description": character_description,
+        "image_file": image_file,
+        "user_id": user_id,
+        "element": "character" # This is a fixed string
+    )
+
+    To add a Planet:
+    
+    body: formData(
+        "name": planet_name,
+        "climate": planet_climate,
+        "diameter": planet_diameter,
+        "gravity": planet_gravity,
+        "orbital_period": planet_orbital_period,
+        "population": planet_population,
+        "rotation_period": planet_rotation_period,
+        "surface_water": planet_surface_water,
+        "terrain": planet_terrain
+        "description": planet_description,
+        "image_file": image_file,
+        "user_id": user_id,
+        "element": "planet" # This is a fixed string
+    )
+
+    To add a StarShip:
+    
+    body: formData(
+        "name": starship_name,
+        "model": starship_model,
+        "MGLT": starship_MGLT,
+        "cargo_capacity": starship_cargo_capacity,
+        "consumable": starship_consumable,
+        "cost_in_credits": starship_cost_in_credits,
+        "crew": starship_crew,
+        "hyperdrive_rating": starship_hyperdrive_rating,
+        "length": starship_length,
+        "manufacturer": starship_manufacturer,
+        "passangers": starship_passangers,
+        "starship_class": starship_class
+        "description": starship_description,
+        "image_file": image_file,
+        "user_id": user_id,
+        "element": "starship" # This is a fixed string
+    )
+
 
 
 ## Contact
