@@ -344,6 +344,13 @@ p {
     margin-left: 1.5rem;
 }
 
+.confirmBtn:active {
+    border-bottom-color: rgb(3, 3, 3);
+    border-right-color: rgb(30, 30, 30);
+    border-left-color: #fae500;
+    border-top-color: #fae500;
+}
+
 .createAccountText {
     padding-top: 1rem;
     cursor: pointer;

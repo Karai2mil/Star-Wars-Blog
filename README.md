@@ -1,88 +1,117 @@
-------------------- API STRUCTURE ------------------- 
+# STAR WARS BLOG
 
-ORDER: 
----USER---
-NEW USER
-UPDATE USERNAME
-GET USER
-GET TOKEN
----CHARACTERS---
-POST CHARACTER
-GET ALL CHARACTERS
-GET CHARACTER BY ID
----PLANETS---
-POST PLANET
-GET ALL PLANETS
-GET PLANET BY ID
----STARSHIPS---
-POST STARSHIP
-GET ALL STARSHIPS
-GET STARSHIP BY ID
----FAVORITES---
-GET ALL FAVORITES
-POST FAVORITE CHARACTER
-POST FAVORITE PLANET
-POST FAVORITE STARSHIP
-DELETE FAVORITE CHARACTER
-DELETE FAVORITE PLANET
-DELETE FAVORITE STARSHIP
+## Instalation instructions
 
------NEW USER-----
+**1.** Clone the repository on your local file:
 
-route('/users'), method('POST')
+    git clone https://github.com/Karai2mil/Star-Wars-Blog
 
-{
-    'username': username
-    'mail': mail
-    'passowrd': password
-}
+**2. Front-End configuration** 
 
------- UPDATE USERNAME ------
+**2.1-** Navigate to the root directory to install dependencies:
 
-route('/users/<int:user_id>'), method('PUT')
+    npm install  # Install dependencies (only the first time)
 
-{
-    'username': new_username
-}
+**2.2- Environment Variables Configuration** 
 
------- GET USER ------
 
-route('/users/<int:user_id>'), method('GET')
+1) Copy the `.env.example` file and rename it to `.env`.
+2) Modify the `DATABASE_URL` variable with your database information.
 
-return: 'User data:',
-{
-    'id': user_id
-    'username': user_username
-    'mail': user_mail
-}
+*** By default, the `BACKEND_URL` variable is configured for connecting the Front-End to the Back-End.
 
------- GET TOKEN ------
+## API STRUCTURE
 
-route('/token'), method('POST')
+[**1. User**](#user)
+* New User
+* Update username
+* Get user
+* Get token
 
-body: {
-    'mail': mail
-    'password': password
-}
+[**2. Characters**](#characters)
+* Post character
+* Get all characters
+* Get character by id
 
-return: 'access_token'
+[**3. Planets**](#planets)
+* Post planet
+* Get all planets
+* Get planet by id
 
------- POST CHARACTER ------
+[**4. StarShips**](#starships)
+* Post starship
+* Get all starships
+* Get starship by id
 
-route('/character'), method('POST')
+[**5. Favorites**](#favorites)
+* Get all favorites
+* Post favorite character
+* Post favorite planet
+* Post favorite starship
+* Delete favorite character
+* Delete favorite planet
+* Delete favorite starship
 
-body: {
-    "name": character_name,
-    "birth_year": character_birth_year,
-    "eye_color": character_eye_color,
-    "hair_color": character_hair_color,
-    "skin_color": character_skin_color,
-    "gender": character_gender,
-    "height": character_height,
-    "mass": character_mass,
-}
 
------ GET ALL CHARACTERS ------
+### User
+
+**New user**
+
+    route('/users'), method('POST')
+
+    body: {
+        'username': username
+        'mail': mail
+        'passowrd': password
+    }
+
+**Update username**
+
+    route('/users/<int:user_id>'), method('PUT')
+    body: {
+        'username': new_username
+    }
+
+**Get user**
+
+    route('/users/<int:user_id>'), method('GET')
+
+    return: 'User data:',
+    {
+        'id': user_id
+        'username': user_username
+        'mail': user_mail
+    }
+
+**Get token**
+
+    route('/token'), method('POST')
+
+    body: {
+        'mail': mail
+        'password': password
+    }
+
+    return: 'access_token'
+
+### Characters
+
+**Post character**
+
+    route('/character'), method('POST')
+
+    body: {
+        "name": character_name,
+        "birth_year": character_birth_year,
+        "eye_color": character_eye_color,
+        "hair_color": character_hair_color,
+        "skin_color": character_skin_color,
+        "gender": character_gender,
+        "height": character_height,
+        "mass": character_mass,
+    }
+
+**Get all characters**
 
 route('/character'), method('GET')
 
@@ -99,43 +128,28 @@ return: [ ... ,
     }
 , ... ]
 
------ GET CHARACTER BY ID ------
+**Get character by id**
 
-route('/character/<int:character_id>'), method('GET')
+    route('/character/<int:character_id>'), method('GET')
 
-return: {
-    "name": character_name_,
-    "birth_year": character_birth_year,
-    "eye_color": character_eye_color,
-    "hair_color": character_hair_color,
-    "skin_color": character_skin_color,
-    "gender": character_gender,
-    "height": character_height,
-    "mass": character_mass,
-}
+    return: {
+        "name": character_name_,
+        "birth_year": character_birth_year,
+        "eye_color": character_eye_color,
+        "hair_color": character_hair_color,
+        "skin_color": character_skin_color,
+        "gender": character_gender,
+        "height": character_height,
+        "mass": character_mass,
+    }
 
------- POST PLANET ------
+### Planets
 
-route('/planet'), method('POST')
+**Post planet**
 
-body: {
-    "name": planet_name,
-    "climate": planet_climate,
-    "diameter": planet_diameter,
-    "gravity": planet_gravity,
-    "orbital_period": planet_orbital_period,
-    "population": planet_population,
-    "rotation_period": planet_rotation_period,
-    "surface_water": planet_surface_water,
-    "terrain": planet_terrain
-}
+    route('/planet'), method('POST')
 
------ GET ALL PLANETS ------
-
-route('/planet'), method('GET')
-
-return: [ ... ,
-    {
+    body: {
         "name": planet_name,
         "climate": planet_climate,
         "diameter": planet_diameter,
@@ -146,44 +160,63 @@ return: [ ... ,
         "surface_water": planet_surface_water,
         "terrain": planet_terrain
     }
-, ...]
 
------ GET PLANET BY ID ------
+**Get all planets**
 
-route('/planet/<int:planet_id>'), method('GET')
+    route('/planet'), method('GET')
 
-return: {
-    "name": planet_name,
-    "climate": planet_climate,
-    "diameter": planet_diameter,
-    "gravity": planet_gravity,
-    "orbital_period": planet_orbital_period,
-    "population": planet_population,
-    "rotation_period": planet_rotation_period,
-    "surface_water": planet_surface_water,
-    "terrain": planet_terrain
-}
+    return: [ ... ,
+        {
+            "name": planet_name,
+            "climate": planet_climate,
+            "diameter": planet_diameter,
+            "gravity": planet_gravity,
+            "orbital_period": planet_orbital_period,
+            "population": planet_population,
+            "rotation_period": planet_rotation_period,
+            "surface_water": planet_surface_water,
+            "terrain": planet_terrain
+        }
+    , ...]
 
------- POST STARSHIP ------
+**Get planet by id**
 
-route('/starship'), method('POST')
+    route('/planet/<int:planet_id>'), method('GET')
 
-body: {
-    "name": starship_name,
-    "model": starship_model,
-    "MGLT": starship_MGLT,
-    "cargo_capacity": starship_cargo_capacity,
-    "consumable": starship_consumable,
-    "cost_in_credits": starship_cost_in_credits,
-    "crew": starship_crew,
-    "hyperdrive_rating": starship_hyperdrive_rating,
-    "length": starship_length,
-    "manufacturer": starship_manufacturer,
-    "passangers": starship_passangers,
-    "starship_class": starship_class
-}
+    return: {
+        "name": planet_name,
+        "climate": planet_climate,
+        "diameter": planet_diameter,
+        "gravity": planet_gravity,
+        "orbital_period": planet_orbital_period,
+        "population": planet_population,
+        "rotation_period": planet_rotation_period,
+        "surface_water": planet_surface_water,
+        "terrain": planet_terrain
+    }
 
------ GET ALL STARSHIPS ------
+### StarShips
+
+**Post starship**
+
+    route('/starship'), method('POST')
+
+    body: {
+        "name": starship_name,
+        "model": starship_model,
+        "MGLT": starship_MGLT,
+        "cargo_capacity": starship_cargo_capacity,
+        "consumable": starship_consumable,
+        "cost_in_credits": starship_cost_in_credits,
+        "crew": starship_crew,
+        "hyperdrive_rating": starship_hyperdrive_rating,
+        "length": starship_length,
+        "manufacturer": starship_manufacturer,
+        "passangers": starship_passangers,
+        "starship_class": starship_class
+    }
+
+**Get all starships**
 
 route('/starship'), method('GET')
 
@@ -204,53 +237,54 @@ return: [ ... ,
     }
 , ...]
 
------ GET STARSHIP BY ID ------
+**Get starship by id**
 
-route('/starship/<int:starship_id>'), method('GET')
+    route('/starship/<int:starship_id>'), method('Get')
 
-return: {
-    "name": starship_name,
-    "model": starship_model,
-    "MGLT": starship_MGLT,
-    "cargo_capacity": starship_cargo_capacity,
-    "consumable": starship_consumable,
-    "cost_in_credits": starship_cost_in_credits,
-    "crew": starship_crew,
-    "hyperdrive_rating": starship_hyperdrive_rating,
-    "length": starship_length,
-    "manufacturer": starship_manufacturer,
-    "passangers": starship_passangers,
-    "starship_class": starship_class
-}
+    return: {
+        "name": starship_name,
+        "model": starship_model,
+        "MGLT": starship_MGLT,
+        "cargo_capacity": starship_cargo_capacity,
+        "consumable": starship_consumable,
+        "cost_in_credits": starship_cost_in_credits,
+        "crew": starship_crew,
+        "hyperdrive_rating": starship_hyperdrive_rating,
+        "length": starship_length,
+        "manufacturer": starship_manufacturer,
+        "passangers": starship_passangers,
+        "starship_class": starship_class
+    }
 
+### Favorites
 
------ GET USER FAVORITES ------
+**Get user favorites**
 
-route('/favorites/<int:user_id>'), method('GET')
+    route('/favorites/<int:user_id>'), method('GET')
 
-return: {
-    'characters': [character_id's]
-    'planets': [planet_id's]
-    'starships': [starship_id's]
-}
+    return: {
+        'characters': [character_id's]
+        'planets': [planet_id's]
+        'starships': [starship_id's]
+    }
 
------ POST FAVORITE (CHARACTER, PLANET, STARSHIP) ------
+**Post favorite (character, planet, starship)**
 
-route('/favorites/(character, planet, starship)'), method('POST')
+    route('/favorites/(character or planet or starship)'), method('POST')
 
-body: {
-    'user_id': user_id
-    '(character, planet, starship)_id': (character, planet, starship)_id
-}
+    body: {
+        'user_id': user_id
+        '(character, planet, starship)_id': (character, planet, starship)_id
+    }
 
------ DELETE FAVORITE (CHARACTER, PLANET, STARSHIP) ------
+**Delete favorite (character or planet or starship)**
 
-route('/favorites/(character, planet, starship)'), method('DELETE')
+    route('/favorites/(character, planet, starship)'), method('DELETE')
 
-body: {
-    'user_id': user_id
-    '(character, planet, starship)_id': (character, planet, starship)_id
-}
+    body: {
+        'user_id': user_id
+        '(character, planet, starship)_id': (character, planet, starship)_id
+    }
 
 
 
