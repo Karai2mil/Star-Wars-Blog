@@ -1,8 +1,19 @@
 # STAR WARS BLOG
 
+Star Wars Blog is an interactive and 100% responsive application web with information about characters, planets and starships from the Star Wars saga. As a user you can investigate this information and add new cards to personalize your page.
+
+## Index
+**1.** [Instalation instructions](#instalation-instructions)
+
+**2.** [Charging initial data](#charging-initial-data)
+
+**3.** [API structure](#api-structure)
+
+**4.** [Contact](#contact)
+
 ## Instalation instructions
 
-**1.** Clone the repository on your local file:
+**1.** Clone the repository to your local machine:
 
     git clone https://github.com/Karai2mil/Star-Wars-Blog
 
@@ -20,7 +31,42 @@
 
 *** By default, the `BACKEND_URL` variable is configured for connecting the Front-End to the Back-End.
 
-## API STRUCTURE
+**3. Activate Back-End**
+
+**3.1-** From the root directory, enter the backend directory, and if you don't have a virtual environment created, set one up:
+
+    cd src/api
+    python3 -m venv myenv  # Create a virtual environment
+
+**3.2-** Activate the virtual environment:
+
+    source myenv/bin/activate  # Linux/Mac
+    myenv\Scripts\activate     # Windows
+
+**3.3-** Return to the root directory and install the backend dependencies:
+
+    pip install -r requirements.txt
+
+**3.4-** In the root directory, run the Back-End server:
+
+    python3 src/app.py
+
+**4. Access the Application**
+
+Once both servers are active, access the application in your browser by entering the following URL:
+
+    http://localhost:3000
+
+## Charging initial data
+The page is equipped with a file containing all the characters, planets, and starships to enrich your information page. To enrich your information page, follow the steps below, or refer to the [API Structure](#api-structure) to create your custom data:
+
+**1.** You need to have finished all the instalation instructions. If you have problems with this section, please use [Contact](#contact).
+
+**2.** Open POSTMAN or any other similar software and send the following Back-End request:
+    
+    route('/get_exported_data'), method('GET')
+
+## API structure
 
 [**1. User**](#user)
 * New User
@@ -113,20 +159,20 @@
 
 **Get all characters**
 
-route('/character'), method('GET')
+    route('/character'), method('GET')
 
-return: [ ... ,
-    {
-        "name": character_name_,
-        "birth_year": character_birth_year,
-        "eye_color": character_eye_color,
-        "hair_color": character_hair_color,
-        "skin_color": character_skin_color,
-        "gender": character_gender,
-        "height": character_height,
-        "mass": character_mass,
-    }
-, ... ]
+    return: [ ... ,
+        {
+            "name": character_name_,
+            "birth_year": character_birth_year,
+            "eye_color": character_eye_color,
+            "hair_color": character_hair_color,
+            "skin_color": character_skin_color,
+            "gender": character_gender,
+            "height": character_height,
+            "mass": character_mass,
+        }
+    , ... ]
 
 **Get character by id**
 
@@ -218,24 +264,24 @@ return: [ ... ,
 
 **Get all starships**
 
-route('/starship'), method('GET')
+    route('/starship'), method('GET')
 
-return: [ ... , 
-    {
-        "name": starship_name,
-        "model": starship_model,
-        "MGLT": starship_MGLT,
-        "cargo_capacity": starship_cargo_capacity,
-        "consumable": starship_consumable,
-        "cost_in_credits": starship_cost_in_credits,
-        "crew": starship_crew,
-        "hyperdrive_rating": starship_hyperdrive_rating,
-        "length": starship_length,
-        "manufacturer": starship_manufacturer,
-        "passangers": starship_passangers,
-        "starship_class": starship_class
-    }
-, ...]
+    return: [ ... , 
+        {
+            "name": starship_name,
+            "model": starship_model,
+            "MGLT": starship_MGLT,
+            "cargo_capacity": starship_cargo_capacity,
+            "consumable": starship_consumable,
+            "cost_in_credits": starship_cost_in_credits,
+            "crew": starship_crew,
+            "hyperdrive_rating": starship_hyperdrive_rating,
+            "length": starship_length,
+            "manufacturer": starship_manufacturer,
+            "passangers": starship_passangers,
+            "starship_class": starship_class
+        }
+    , ...]
 
 **Get starship by id**
 
@@ -287,5 +333,8 @@ return: [ ... ,
     }
 
 
+## Contact
+
+If you have questions or encounter issues using this README, feel free to contact me directly at my email: [cabrerakarai@gmail.com](mailto:cabrerakarai@gmail.com).
 
 

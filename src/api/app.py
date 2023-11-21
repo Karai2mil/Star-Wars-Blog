@@ -832,52 +832,51 @@ def addCard():
         return jsonify({'error': 'Error adding card: ' + str(e)}), 500
     
 
-#Cargamos informacion de archivo exported_data.json
+#---------------- LOAD DATA FROM exported_data.json FILE ----------------
 
 @app.route('/get_exported_data', methods=['GET'])
 def get_exported_data(): 
-    print('llegue linea 649')
     with open("src/api/exported_data.json", "r") as json_file:
         export_data = json.load(json_file)
-    print('llegue linea 652')
-    # character_data = export_data['characters']
 
-    # for char_data in character_data:
-    #     character = Character(
-    #         name=char_data["name"],
-    #         birth_year=char_data["birth_year"],
-    #         eye_color=char_data["eye_color"],
-    #         hair_color=char_data["hair_color"],
-    #         skin_color=char_data["skin_color"],
-    #         gender=char_data["gender"],
-    #         height=char_data["height"],
-    #         mass=char_data["mass"],
-    #         image_url=char_data["image_url"],
-    #         uid=char_data["uid"],
-    #     )
-    #     db.session.add(character)
+    character_data = export_data['characters']
 
-    # db.session.commit()
+    for char_data in character_data:
+        character = Character(
+            name=char_data["name"],
+            birth_year=char_data["birth_year"],
+            eye_color=char_data["eye_color"],
+            hair_color=char_data["hair_color"],
+            skin_color=char_data["skin_color"],
+            gender=char_data["gender"],
+            height=char_data["height"],
+            mass=char_data["mass"],
+            image_url=char_data["image_url"],
+            uid=char_data["uid"],
+        )
+        db.session.add(character)
 
-    # planet_data = export_data["planets"]
+    db.session.commit()
 
-    # for planet_data in planet_data:
-    #     planet = Planet(
-    #         name=planet_data["name"],
-    #         climate=planet_data["climate"],
-    #         diameter=planet_data["diameter"],
-    #         gravity=planet_data["gravity"],
-    #         orbital_period=planet_data["orbital_period"],
-    #         population=planet_data["population"],
-    #         rotation_period=planet_data["rotation_period"],
-    #         surface_water=planet_data["surface_water"],
-    #         terrain=planet_data["terrain"],
-    #         image_url=planet_data["image_url"],
-    #         uid=planet_data["uid"],
-    #     )
-    #     db.session.add(planet)
+    planet_data = export_data["planets"]
 
-    # db.session.commit()
+    for planet_data in planet_data:
+        planet = Planet(
+            name=planet_data["name"],
+            climate=planet_data["climate"],
+            diameter=planet_data["diameter"],
+            gravity=planet_data["gravity"],
+            orbital_period=planet_data["orbital_period"],
+            population=planet_data["population"],
+            rotation_period=planet_data["rotation_period"],
+            surface_water=planet_data["surface_water"],
+            terrain=planet_data["terrain"],
+            image_url=planet_data["image_url"],
+            uid=planet_data["uid"],
+        )
+        db.session.add(planet)
+
+    db.session.commit()
 
     starship_data = export_data["starships"]
 
